@@ -1,5 +1,5 @@
-# Berichten Werkgevers ↔ Verzekeraars 2019
+# Berichten Werkgevers ↔ Verzekeraars 2020
 
 | Bericht | Schema | Elementen |
 |---|---|---|
-| [Verzuimmelding](VerzuimmeldingWerkgeverVerzekeraar.md) | [`VerzuimmeldingWerkgeverVerzekeraar.xsd`](../xsd/VerzuimmeldingWerkgeverVerzekeraar.xsd) | 171 |
+| [Verzuimmelding](VerzuimmeldingWerkgeverVerzekeraar.md) | [`VerzuimmeldingWerkgeverVerzekeraar.xsd`](../xsd/VerzuimmeldingWerkgeverVerzekeraar.xsd) | 172 |
