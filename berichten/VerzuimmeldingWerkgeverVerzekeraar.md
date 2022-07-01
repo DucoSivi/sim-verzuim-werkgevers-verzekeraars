@@ -1,13 +1,13 @@
 # Verzuimmelding
 
-Verzuimstandaard Werkgevers ↔ Verzekeraars, release 2021.
+Verzuimstandaard Werkgevers ↔ Verzekeraars, release 2022.
 
 | | |
 |---|---|
 | Schema | [`xsd/VerzuimmeldingWerkgeverVerzekeraar.xsd`](../xsd/VerzuimmeldingWerkgeverVerzekeraar.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenWerkgeverVerzekeraar/2021` |
-| Versie | 2021.0 |
-| Elementen | 172 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenWerkgeverVerzekeraar/2022` |
+| Versie | 2022.0 |
+| Elementen | 173 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
 
@@ -18,7 +18,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | **`VerzuimmeldingenWerkgeverVerzekeraar`** |  | 1..1 | groep |  |
 | &emsp;**`BrAlg`** | Bericht algemeen | 1..1 | groep |  |
 | &emsp;&emsp;`BrCd` | an..5 | 1..1 | an..5 | 00800 |
-| &emsp;&emsp;`VnrBrCd` | an..5 | 1..1 | an..5 | 00008 |
+| &emsp;&emsp;`VnrBrCd` | an..5 | 1..1 | an..5 | 00009 |
 | &emsp;&emsp;`AandatBr` | an10 | 1..1 | datum |  |
 | &emsp;&emsp;`AantijdBr` | an8 | 1..1 | tijd |  |
 | &emsp;&emsp;`IdInzndr` | an..40 | 1..1 | an..40 |  |
@@ -154,7 +154,8 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatEerstVrzmdgOud` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatHrstld` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatHrstldWrkgvr` | an10 | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`PrcVrzm` | Copyright SIVI | 1..1 | n..6,2 |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`DatVrwHrstl` | an10 | 0..1 | datum |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`PrcVrzm` | n..6,2 | 1..1 | n..6,2 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`BijzRdnStartVrzmCd` | an2 | 0..1 | an2 | 01, 02, 03, 04 |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`OorzkVrzmCd` | an2 | 1..1 | an2 | 10, 11, 99 |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`VngntJN` | a1 | 1..1 | an1 | J, N, O |
