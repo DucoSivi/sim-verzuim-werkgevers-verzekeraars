@@ -1,5 +1,5 @@
-# Berichten Werkgevers ↔ Verzekeraars 2022
+# Berichten Werkgevers ↔ Verzekeraars 2024
 
 | Bericht | Schema | Elementen |
 |---|---|---|
-| [Verzuimmelding](VerzuimmeldingWerkgeverVerzekeraar.md) | [`VerzuimmeldingWerkgeverVerzekeraar.xsd`](../xsd/VerzuimmeldingWerkgeverVerzekeraar.xsd) | 173 |
+| [Verzuimmelding](VerzuimmeldingWerkgeverVerzekeraar.md) | [`VerzuimmeldingWerkgeverVerzekeraar.xsd`](../xsd/VerzuimmeldingWerkgeverVerzekeraar.xsd) | 174 |

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:str="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenWerkgeverVerzekeraar/2022" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenWerkgeverVerzekeraar/2022" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2022.0">
+<xsd:schema xmlns:str="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenWerkgeverVerzekeraar/2024" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenWerkgeverVerzekeraar/2024" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2024.0">
 	<xsd:element name="VerzuimmeldingenWerkgeverVerzekeraar">
 		<xsd:complexType>
 			<xsd:sequence>
@@ -18,7 +18,7 @@
 								<xsd:simpleType>
 									<xsd:restriction base="xsd:string">
 										<xsd:maxLength value="5"/>
-										<xsd:enumeration value="00009"/>
+										<xsd:enumeration value="00010"/>
 									</xsd:restriction>
 								</xsd:simpleType>
 							</xsd:element>
@@ -110,12 +110,11 @@
 							<xsd:element name="Cntprsn" minOccurs="0" maxOccurs="9">
 								<xsd:complexType>
 									<xsd:sequence>
-										<xsd:element name="IdWrknmr" type="str:IdentificatieWerknemer" minOccurs="0"/>
 										<xsd:element name="Persnr" type="str:Sleutelwaarde35" minOccurs="0"/>
 										<xsd:element name="Achternaam" type="str:Achternaam"/>
-										<xsd:element name="Voorl" type="str:Voorletters" minOccurs="0"/>
+										<xsd:element name="Voorl" type="str:Voorletters"/>
 										<xsd:element name="Roepnaam" type="str:Roepnaam" minOccurs="0"/>
-										<xsd:element name="GslchtCd" minOccurs="0">
+										<xsd:element name="GslchtCd">
 											<xsd:simpleType>
 												<xsd:restriction base="xsd:string">
 													<xsd:length value="1"/>
@@ -125,6 +124,7 @@
 											</xsd:simpleType>
 										</xsd:element>
 										<xsd:element name="RolCntprsnCd" type="str:RolContactpersoon"/>
+										<xsd:element name="IdCntctprsn" type="str:IdentificatieContactpersoon" minOccurs="0"/>
 										<xsd:element name="Com" maxOccurs="9">
 											<xsd:complexType>
 												<xsd:sequence>
@@ -315,6 +315,7 @@
 													</xsd:element>
 													<xsd:element name="Fnctcd" type="str:Functie" minOccurs="0"/>
 													<xsd:element name="NmFnct" type="str:Tekst35" minOccurs="0"/>
+													<xsd:element name="FsIndFZ" type="str:CodeFaseIndelingFZ" minOccurs="0"/>
 													<xsd:element name="NmOrgeenh" type="str:NaamOrganisatie" minOccurs="0"/>
 													<xsd:element name="OrgeenhCd" type="str:OrganisatieEenheid"/>
 													<xsd:element name="OndOrgeenhCd" type="str:OrganisatieEenheid" minOccurs="0"/>
@@ -404,12 +405,11 @@
 																<xsd:element name="Cntprsn" minOccurs="0" maxOccurs="9">
 																	<xsd:complexType>
 																		<xsd:sequence>
-																			<xsd:element name="IdWrknmr" type="str:IdentificatieWerknemer" minOccurs="0"/>
 																			<xsd:element name="Persnr" type="str:Sleutelwaarde35" minOccurs="0"/>
 																			<xsd:element name="Achternaam" type="str:Achternaam"/>
-																			<xsd:element name="Voorl" type="str:Voorletters" minOccurs="0"/>
+																			<xsd:element name="Voorl" type="str:Voorletters"/>
 																			<xsd:element name="Roepnaam" type="str:Roepnaam" minOccurs="0"/>
-																			<xsd:element name="GslchtCd" minOccurs="0">
+																			<xsd:element name="GslchtCd">
 																				<xsd:simpleType>
 																					<xsd:restriction base="xsd:string">
 																						<xsd:length value="1"/>
@@ -419,6 +419,7 @@
 																				</xsd:simpleType>
 																			</xsd:element>
 																			<xsd:element name="RolCntprsnCd" type="str:RolContactpersoon"/>
+																			<xsd:element name="IdCntctprsn" type="str:IdentificatieContactpersoon" minOccurs="0"/>
 																			<xsd:element name="Com" maxOccurs="9">
 																				<xsd:complexType>
 																					<xsd:sequence>
@@ -482,12 +483,11 @@
 													<xsd:element name="Cntprsn" minOccurs="0" maxOccurs="9">
 														<xsd:complexType>
 															<xsd:sequence>
-																<xsd:element name="IdWrknmr" type="str:IdentificatieWerknemer" minOccurs="0"/>
 																<xsd:element name="Persnr" type="str:Sleutelwaarde35" minOccurs="0"/>
 																<xsd:element name="Achternaam" type="str:Achternaam"/>
-																<xsd:element name="Voorl" type="str:Voorletters" minOccurs="0"/>
+																<xsd:element name="Voorl" type="str:Voorletters"/>
 																<xsd:element name="Roepnaam" type="str:Roepnaam" minOccurs="0"/>
-																<xsd:element name="GslchtCd" minOccurs="0">
+																<xsd:element name="GslchtCd">
 																	<xsd:simpleType>
 																		<xsd:restriction base="xsd:string">
 																			<xsd:length value="1"/>
@@ -497,6 +497,7 @@
 																	</xsd:simpleType>
 																</xsd:element>
 																<xsd:element name="RolCntprsnCd" type="str:RolContactpersoon"/>
+																<xsd:element name="IdCntctprsn" type="str:IdentificatieContactpersoon" minOccurs="0"/>
 																<xsd:element name="Com" maxOccurs="9">
 																	<xsd:complexType>
 																		<xsd:sequence>
@@ -581,6 +582,27 @@
 			<xsd:enumeration value="O"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+	<xsd:simpleType name="CodeFaseIndelingFZ">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+			<xsd:enumeration value="0"/>
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2"/>
+			<xsd:enumeration value="3"/>
+			<xsd:enumeration value="4"/>
+			<xsd:enumeration value="5"/>
+			<xsd:enumeration value="6"/>
+			<xsd:enumeration value="17"/>
+			<xsd:enumeration value="18"/>
+			<xsd:enumeration value="19"/>
+			<xsd:enumeration value="38"/>
+			<xsd:enumeration value="40"/>
+			<xsd:enumeration value="41"/>
+			<xsd:enumeration value="42"/>
+			<xsd:enumeration value="43"/>
+			<xsd:enumeration value="44"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 	<xsd:simpleType name="Functie">
 		<xsd:restriction base="xsd:string">
 			<xsd:maxLength value="15"/>
@@ -611,6 +633,11 @@
 			<xsd:maxLength value="40"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+	<xsd:simpleType name="IdentificatieContactpersoon">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="40"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 	<xsd:simpleType name="IdentificatieContract">
 		<xsd:restriction base="xsd:string">
 			<xsd:maxLength value="40"/>
@@ -633,6 +660,7 @@
 	</xsd:simpleType>
 	<xsd:simpleType name="IdentificatieVerzuim">
 		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
 			<xsd:maxLength value="40"/>
 		</xsd:restriction>
 	</xsd:simpleType>
@@ -643,6 +671,7 @@
 	</xsd:simpleType>
 	<xsd:simpleType name="IdentificatieWerknemer">
 		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
 			<xsd:maxLength value="40"/>
 		</xsd:restriction>
 	</xsd:simpleType>
@@ -693,6 +722,7 @@
 	</xsd:simpleType>
 	<xsd:simpleType name="OrganisatieEenheid">
 		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
 			<xsd:maxLength value="70"/>
 		</xsd:restriction>
 	</xsd:simpleType>
