@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:str="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenWerkgeverVerzekeraar/2024" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenWerkgeverVerzekeraar/2024" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2024.0">
+<xsd:schema xmlns:str="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenWerkgeverVerzekeraar/2025" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenWerkgeverVerzekeraar/2025" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2025.0">
 	<xsd:element name="VerzuimmeldingenWerkgeverVerzekeraar">
 		<xsd:complexType>
 			<xsd:sequence>
@@ -18,7 +18,7 @@
 								<xsd:simpleType>
 									<xsd:restriction base="xsd:string">
 										<xsd:maxLength value="5"/>
-										<xsd:enumeration value="00010"/>
+										<xsd:enumeration value="00011"/>
 									</xsd:restriction>
 								</xsd:simpleType>
 							</xsd:element>
@@ -68,7 +68,8 @@
 							<xsd:element name="VestigingsnrHandelsregister" type="str:VestigingsnummerHandelsregister" minOccurs="0"/>
 							<xsd:element name="IdWrkgvrArbdnst" type="str:IdentificatieWerkgever" minOccurs="0"/>
 							<xsd:element name="AansltnrGeguitwlngArbdnst" type="str:AansluitnummerGegevensuitwisseling" minOccurs="0"/>
-							<xsd:element name="IDWrkgvrVerzekeraar" type="str:IdentificatieWerkgever" minOccurs="0"/>
+							<xsd:element name="IDWrkgvrVerzekeraar" type="str:IdentificatieWerkgever"/>
+							<xsd:element name="IdWrkgvrUWV" type="str:IdentificatieWerkgever" minOccurs="0"/>
 							<xsd:element name="Lhnr" type="str:Loonheffingnummer" minOccurs="0"/>
 							<xsd:element name="IndERDWGA" minOccurs="0">
 								<xsd:simpleType>
@@ -148,7 +149,6 @@
 							<xsd:element name="Wrknmr" maxOccurs="unbounded">
 								<xsd:complexType>
 									<xsd:sequence>
-										<xsd:element name="VrwrkCd" type="str:Verwerkingscode"/>
 										<xsd:element name="IngdatMut" type="xsd:date" minOccurs="0"/>
 										<xsd:element name="SofiNr" type="str:Sofinummer" minOccurs="0"/>
 										<xsd:element name="Gebdat" type="xsd:date"/>
@@ -181,10 +181,27 @@
 										</xsd:element>
 										<xsd:element name="IdWrknmr" type="str:IdentificatieWerknemer"/>
 										<xsd:element name="IdWrknmrOud" type="str:IdentificatieWerknemer" minOccurs="0"/>
+										<xsd:element name="WrknmrNoriskJN" minOccurs="0">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:length value="1"/>
+													<xsd:pattern value="\D*"/>
+													<xsd:enumeration value="J"/>
+													<xsd:enumeration value="N"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="BnkGiro" minOccurs="0">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="Iban" type="str:IbanRekeningnummer" minOccurs="0"/>
+													<xsd:element name="Bic" type="str:Bic" minOccurs="0"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
 										<xsd:element name="Prtnr" minOccurs="0">
 											<xsd:complexType>
 												<xsd:sequence>
-													<xsd:element name="VrwrkCd" type="str:Verwerkingscode"/>
 													<xsd:element name="SignNm" type="str:SignificantDeelVanDeAchternaam"/>
 													<xsd:element name="Voorv" type="str:Voorvoegsels" minOccurs="0"/>
 												</xsd:sequence>
@@ -264,7 +281,6 @@
 										<xsd:element name="Dnstvbnd" maxOccurs="99">
 											<xsd:complexType>
 												<xsd:sequence>
-													<xsd:element name="VrwrkCd" type="str:Verwerkingscode"/>
 													<xsd:element name="IngdatMut" type="xsd:date" minOccurs="0"/>
 													<xsd:element name="IdDnstvbnd" type="str:IdentificatieDienstverband"/>
 													<xsd:element name="IdDnstvbndOud" type="str:IdentificatieDienstverband" minOccurs="0"/>
@@ -332,7 +348,6 @@
 													<xsd:element name="Arbeidsrelatie" minOccurs="0">
 														<xsd:complexType>
 															<xsd:sequence>
-																<xsd:element name="VrwrkCd" type="str:Verwerkingscode"/>
 																<xsd:element name="IdArbeidsrelatie" type="str:IdentificatieArbeidsrelatie"/>
 																<xsd:element name="IdArbeidsrelatieOud" type="str:IdentificatieArbeidsrelatie" minOccurs="0"/>
 																<xsd:element name="PersNr" type="str:Sleutelwaarde35" minOccurs="0"/>
@@ -401,6 +416,7 @@
 																	</xsd:simpleType>
 																</xsd:element>
 																<xsd:element name="WAZOCd" type="str:WazoCode" minOccurs="0"/>
+																<xsd:element name="ArbCnflJN" type="str:LogischeEenheid" minOccurs="0"/>
 																<xsd:element name="PrcArbther" type="str:Percentage" minOccurs="0"/>
 																<xsd:element name="Cntprsn" minOccurs="0" maxOccurs="9">
 																	<xsd:complexType>
@@ -566,6 +582,11 @@
 			<xsd:maxLength value="512"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+	<xsd:simpleType name="Bic">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="11"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 	<xsd:simpleType name="BijzondereRedenStartVerzuim">
 		<xsd:restriction base="xsd:string">
 			<xsd:length value="2"/>
@@ -626,6 +647,11 @@
 	<xsd:simpleType name="HuisnummerToevoeging">
 		<xsd:restriction base="xsd:string">
 			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="IbanRekeningnummer">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="34"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="IdentificatieArbeidsrelatie">
