@@ -1,4 +1,4 @@
-# Berichten Werkgevers ↔ Verzekeraars 2025
+# Berichten Werkgevers ↔ Verzekeraars 2026
 
 | Bericht | Schema | Elementen |
 |---|---|---|

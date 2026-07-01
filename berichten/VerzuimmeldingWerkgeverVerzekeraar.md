@@ -1,12 +1,12 @@
 # Verzuimmelding
 
-Verzuimstandaard Werkgevers ↔ Verzekeraars, release 2025.
+Verzuimstandaard Werkgevers ↔ Verzekeraars, release 2026.
 
 | | |
 |---|---|
 | Schema | [`xsd/VerzuimmeldingWerkgeverVerzekeraar.xsd`](../xsd/VerzuimmeldingWerkgeverVerzekeraar.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenWerkgeverVerzekeraar/2025` |
-| Versie | 2025.0 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenWerkgeverVerzekeraar/2026` |
+| Versie | 2026.0 |
 | Elementen | 176 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
@@ -18,7 +18,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | **`VerzuimmeldingenWerkgeverVerzekeraar`** |  | 1..1 | groep |  |
 | &emsp;**`BrAlg`** | Bericht algemeen | 1..1 | groep |  |
 | &emsp;&emsp;`BrCd` | Bericht, code | 1..1 | an..5 | 00800 |
-| &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00011 |
+| &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00012 |
 | &emsp;&emsp;`AandatBr` | Aanmaakdatum bericht | 1..1 | datum |  |
 | &emsp;&emsp;`AantijdBr` | Aanmaaktijd bericht | 1..1 | tijd |  |
 | &emsp;&emsp;`IdInzndr` | Identificatie inzender | 1..1 | an..40 |  |
@@ -51,7 +51,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`Voorl` | Voorletters | 1..1 | an..6 |  |
 | &emsp;&emsp;&emsp;`Roepnaam` | Roepnaam | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;`GslchtCd` | Geslachtsaanduiding, code | 1..1 | an1 | M, V |
-| &emsp;&emsp;&emsp;`RolCntprsnCd` | Rol contactpersoon, code | 1..1 | an2 | 01, 02, 03, 04, 05 |
+| &emsp;&emsp;&emsp;`RolCntprsnCd` | Copyright SIVI | 1..1 | an2 | 01, 02, 03, 04, 05 |
 | &emsp;&emsp;&emsp;`IdCntctprsn` | Identificatie contactpersoon | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;**`Com`** | Communicatie | 1..9 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`SrtComCd` | Soort communicatie, code | 1..1 | an2 | 01, 02, 04 |
@@ -84,7 +84,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;`NmVrpladrs` | Naam verpleegadres | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`Ingdat` | Ingangsdatum | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;`Enddat` | Einddatum | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;&emsp;`Pc` | Postcode | 1..1 | an6 |  |
+| &emsp;&emsp;&emsp;&emsp;`Pc` | Copyright SIVI | 1..1 | an6 |  |
 | &emsp;&emsp;&emsp;&emsp;`Wnpl` | Woonplaatsnaam | 1..1 | an..24 |  |
 | &emsp;&emsp;&emsp;&emsp;`StraatLang` | Straatnaam_ | 0..1 | an..80 |  |
 | &emsp;&emsp;&emsp;&emsp;`Huisnr` | Huisnummer | 1..1 | n..5 |  |
@@ -106,7 +106,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;**`Com`** | Communicatie | 0..9 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`SrtComCd` | Soort communicatie, code | 1..1 | an2 | 05, 06, 07, 08, 09, 10 |
 | &emsp;&emsp;&emsp;&emsp;`NrCom` | Nummer/adres communicatie | 1..1 | an..512 |  |
-| &emsp;&emsp;&emsp;**`Dnstvbnd`** | Dienstverband | 1..99 | groep |  |
+| &emsp;&emsp;&emsp;**`Dnstvbnd`** | Dienstverband | 1..999 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`IngdatMut` | Ingangsdatum mutatie | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;`IdDnstvbnd` | Identificatie dienstverband | 1..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;`IdDnstvbndOud` | Identificatie dienstverband oud | 0..1 | an..40 |  |
@@ -121,7 +121,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;`Fnctcd` | Functiecode | 0..1 | an..15 |  |
 | &emsp;&emsp;&emsp;&emsp;`NmFnct` | Naam functie | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;`FsIndFZ` | Code fase indeling F&Z | 0..1 | an..2 | 16 waarden, o.a. 0, 1, 2, 3, 4 … |
-| &emsp;&emsp;&emsp;&emsp;`NmOrgeenh` | Copyright SIVI | 0..1 | an..70 |  |
+| &emsp;&emsp;&emsp;&emsp;`NmOrgeenh` | Naam organisatie-eenheid | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`OrgeenhCd` | Organisatie-eenheid, code | 1..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`OndOrgeenhCd` | Onderdeel van organisatieeenheid, code | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`OndOrgeenhCdNm` | Onderdeel van organisatie-eenheid, naam | 0..1 | an..70 |  |
@@ -130,7 +130,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;`VrdlngCd` | Verdeling, code | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;`CdBepTd` | Code contract onbepaalde / bepaalde tijd | 0..1 | an1 | B, O |
 | &emsp;&emsp;&emsp;&emsp;`AantCtrcturenPWk` | Aantal contracturen per week | 0..1 | n..5,2 |  |
-| &emsp;&emsp;&emsp;&emsp;`AantUNormWk` | Normuren per week | 0..1 | n..6,2 |  |
+| &emsp;&emsp;&emsp;&emsp;`AantUNormWk` | Copyright SIVI | 0..1 | n..6,2 |  |
 | &emsp;&emsp;&emsp;&emsp;`SrtVarWrktdCd` | Soort variabele werktijden, code | 0..1 | an2 | 01, 02, 03, 04 |
 | &emsp;&emsp;&emsp;&emsp;`AantLnwchtdgn` | Aantal loonwachtdagen | 0..1 | n..3 |  |
 | &emsp;&emsp;&emsp;&emsp;`PrcLndrbtng` | Percentage loondoorbetaling | 0..1 | n..6,2 |  |
@@ -152,14 +152,14 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;&emsp;`VrzmgvlVnrMld` | Verzuimgeval volgnummer melding | 1..1 | n..3 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`EndVrzmJN` | Einde verzuim J/N | 1..1 | an1 | J, N |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatVrzmWrkgvr` | Datum verzuimmelding werkgever | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`DatEerstVrzmdg` | Datum eerste verzuimdag | 1..1 | datum |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`DatEerstVrzmdg` | Copyright SIVI | 1..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatEerstVrzmdgOud` | Datum eerste verzuimdag oud | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatHrstld` | Datum hersteld | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatHrstldWrkgvr` | Datum hersteld werkgever | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatVrwHrstl` | Datum verwacht herstel | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`PrcVrzm` | Percentage verzuim | 1..1 | n..6,2 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`BijzRdnStartVrzmCd` | Bijzondere reden start verzuim, code | 0..1 | an2 | 01, 02, 03, 04 |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`OorzkVrzmCd` | Oorzaak verzuim, code | 1..1 | an2 | 10, 11, 99 |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`OorzkVrzmCd` | Copyright SIVI | 1..1 | an2 | 10, 11, 99 |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`VngntJN` | Vangnetgeval J/N | 1..1 | an1 | J, N, O |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`RdnEndVrzmCd` | Reden einde verzuim, code | 0..1 | an2 | 01, 03, 04, 05, 07, 08, 09, 10, 11, 12, 99 |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`WAZOCd` | WAZO, code | 0..1 | an2 | 01, 02, 03 |
@@ -171,7 +171,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`Voorl` | Voorletters | 1..1 | an..6 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`Roepnaam` | Roepnaam | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`GslchtCd` | Geslachtsaanduiding, code | 1..1 | an1 | M, V |
-| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`RolCntprsnCd` | Rol contactpersoon, code | 1..1 | an2 | 01, 02, 03, 04, 05 |
+| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`RolCntprsnCd` | Copyright SIVI | 1..1 | an2 | 01, 02, 03, 04, 05 |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`IdCntctprsn` | Identificatie contactpersoon | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**`Com`** | Communicatie | 1..9 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`SrtComCd` | Soort communicatie, code | 1..1 | an2 | 01, 02, 04 |
@@ -186,7 +186,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;&emsp;`Voorl` | Voorletters | 1..1 | an..6 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`Roepnaam` | Roepnaam | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`GslchtCd` | Geslachtsaanduiding, code | 1..1 | an1 | M, V |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`RolCntprsnCd` | Rol contactpersoon, code | 1..1 | an2 | 01, 02, 03, 04, 05 |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`RolCntprsnCd` | Copyright SIVI | 1..1 | an2 | 01, 02, 03, 04, 05 |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`IdCntctprsn` | Identificatie contactpersoon | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;**`Com`** | Communicatie | 1..9 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`SrtComCd` | Soort communicatie, code | 1..1 | an2 | 01, 02, 04 |
